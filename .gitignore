@@ -107,6 +107,6 @@
 !/.config/uwsm/**
 !/.config/fish/
 !/.config/fish/functions/
-!/.config/fish/functions/*
+!/.config/fish/functions/**
 !/.config/kitty/
 !/.config/kitty/custom-theme.conf
