@@ -110,3 +110,5 @@
 !/.config/fish/functions/**
 !/.config/kitty/
 !/.config/kitty/custom-theme.conf
+!/.config/waybar/
+!/.config/waybar/**
