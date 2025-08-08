@@ -100,6 +100,7 @@
 #     No.
 #
 # --- Add your entries below this line:
+!/.colours
 !/.config/
 !/.config/hypr/
 !/.config/hypr/**
