@@ -115,3 +115,6 @@
 !/.config/kitty/themes/*
 !/.config/waybar/
 !/.config/waybar/**
+!/.config/VSCodium/
+!/.config/VSCodium/User/
+!/.config/VSCodium/User/settings.json
