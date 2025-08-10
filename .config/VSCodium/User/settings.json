@@ -1,439 +1,440 @@
 {
-    "editor.minimap.enabled": false,
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "editor.fontFamily": "'Maple Mono NF CN'",
-    "git.openRepositoryInParentFolders": "never",
-    "workbench.colorTheme": "Default Dark Modern",
-    "workbench.colorCustomizations": {
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Contrast colors                     ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "contrastActiveBorder": "#ff007f80",
-        // "contrastBorder": "#ff007f80",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Base colors                       ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        "focusBorder": "#ff007f",
-        "foreground": "#ff80bf",
-        // "disabledForeground": "#000000",
-        // "widget.border": "#000000",
-        // "widget.shadow": "#000000",
-        "selection.background": "#330022",
-        // "descriptionForeground": "#000000",
-        "errorForeground": "#ff002b",
-        // "icon.foreground": "#000000",
-        // "sash.hoverBorder": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                     Window border                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "window.activeBorder": "#000000",
-        // "window.inactiveBorder": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Text colors                       ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "textBlockQuote.background": "#000000",
-        // "textBlockQuote.border": "#000000",
-        // "textCodeBlock.background": "#000000",
-        // "textLink.activeForeground": "#000000",
-        // "textLink.foreground": "#000000",
-        // "textPreformat.foreground": "#000000",
-        // "textPreformat.background": "#000000",
-        // "textSeparator.foreground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                     Action colors                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "toolbar.hoverBackground": "#000000",
-        // "toolbar.activeBackground": "#000000",
-        // "toolbar.hoverOutline": "#000000",
-        // "editorActionList.background": "#000000",
-        // "editorActionList.foreground": "#000000",
-        // "editorActionList.focusForeground": "#000000",
-        // "editorActionList.focusBackground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                     Button control                     ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "button.background": "#000000",
-        // "button.foreground": "#000000",
-        // "button.border": "#000000",
-        // "button.separator": "#000000",
-        // "button.hoverBackground": "#000000",
-        // "button.secondaryForeground": "#000000",
-        // "button.secondaryBackground": "#000000",
-        // "button.secondaryHoverBackground": "#000000",
-        // "checkbox.background": "#000000",
-        // "checkbox.foreground": "#000000",
-        // "checkbox.disabled.background": "#000000",
-        // "checkbox.disabled.foreground": "#000000",
-        // "checkbox.border": "#000000",
-        // "checkbox.selectBackground": "#000000",
-        // "checkbox.selectBorder": "#000000",
-        // "radio.activeForeground": "#000000",
-        // "radio.activeBackground": "#000000",
-        // "radio.activeBorder": "#000000",
-        // "radio.inactiveForeground":"#000000",
-        // "radio.inactiveBackground":"#000000",
-        // "radio.inactiveBorder": "#000000",
-        // "radio.inactiveHoverBackground":"#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Dropdown control                    ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "dropdown.background": "#000000",
-        // "dropdown.listBackground": "#000000",
-        // "dropdown.border": "#000000",
-        // "dropdown.foreground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                     Input control                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "input.background": "#000000",
-        // "input.border": "#000000",
-        // "input.foreground": "#000000",
-        // "input.placeholderForeground": "#000000",
-        // "inputOption.activeBackground": "#000000",
-        // "inputOption.activeBorder": "#000000",
-        // "inputOption.activeForeground": "#000000",
-        // "inputOption.hoverBackground": "#000000",
-        // "inputValidation.errorBackground": "#000000",
-        // "inputValidation.errorForeground": "#000000",
-        // "inputValidation.errorBorder": "#000000",
-        // "inputValidation.infoBackground": "#000000",
-        // "inputValidation.infoForeground": "#000000",
-        // "inputValidation.infoBorder": "#000000",
-        // "inputValidation.warningBackground": "#000000",
-        // "inputValidation.warningForeground": "#000000",
-        // "inputValidation.warningBorder": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Scrollbar control                    ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "scrollbar.shadow": "#000000",
-        // "scrollbarSlider.activeBackground": "#000000",
-        // "scrollbarSlider.background": "#000000",
-        // "scrollbarSlider.hoverBackground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                         Badge                          ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "badge.foreground": "#330022",
-        // "badge.background": "#ffd400",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Progress bar                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "progressBar.background": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Lists and trees                     ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "list.activeSelectionBackground": "#000000",
-        // "list.activeSelectionForeground": "#000000",
-        // "list.dropBackground": "#ff007f",
-        // "list.focusBackground": "#000000",
-        // "list.highlightForeground": "#000000",
-        // "list.hoverBackground": "#000000",
-        // "list.inactiveSelectionBackground": "#000000",
-        // "list.warningForeground": "#000000",
-        // "list.errorForeground": "#000000",
-        // "listFilterWidget.background": "#000000",
-        // "listFilterWidget.outline": "#000000",
-        // "listFilterWidget.noMatchesOutline": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Activity Bar                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        "activityBar.background": "#660044",
-        "activityBar.inactiveForeground": "#FFFFFF80",
-        "activityBar.foreground": "#ffd400",
-        "activityBar.border": "#ff007f80",
-        "activityBar.activeBorder": "#ffd400",
-        // "activityBar.activeBackground": "#660044",
-        "activityBar.activeFocusBorder": "#ff007f80",
-        "activityBarBadge.background": "#ffd400",
-        "activityBarBadge.foreground": "#330022",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                        Profiles                        ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                        Side Bar                        ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "sideBar.background": "#440033",
-        // "sideBarTitle.foreground": "#ffe5f2",
-        // "sideBarSectionHeader.background": "#000000",
-        // "sideBarSectionHeader.border": "#ff007f80",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                        Minimap                         ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                  Editor Groups & Tabs                  ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "editorGroup.border": "#ff007f80",
-        // "editorGroup.dropBackground": "#66004440",
-        // "editorGroupHeader.tabsBackground": "#330022",
-        // "tab.activeBackground": "#660044",
-        // "tab.activeForeground": "#ffd400",
-        // "tab.border": "#ff007f80",
-        // "tab.activeBorderTop": "#ff007f80",
-        // "tab.inactiveBackground": "#660044c0",
-        // "tab.inactiveForeground": "#ffe5f2",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                     Editor colors                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        "editor.foreground": "#ffe5f2",
-        "editor.background": "#330022",
-        // "editor.selectionBackground": "#660044",
-        // "editor.selectionHighlightBackground": "#000000",
-        // "editor.foldBackground": "#00000080",
-        // "editor.wordHighlightBackground": "#660044",
-        // "editor.wordHighlightStrongBackground": "#ffd400",
-        // "editor.findMatchBackground": "#ff007f",
-        // "editor.findMatchHighlightBackground": "#000000",
-        // "editor.findRangeHighlightBackground": "#000000",
-        // "editor.hoverHighlightBackground": "#000000",
-        // "editor.lineHighlightBorder": "#000000",
-        // "editor.rangeHighlightBackground": "#000000",
-        // "editor.snippetTabstopHighlightBackground": "#000000",
-        // "editor.snippetTabstopHighlightBorder": "#000000",
-        // "editor.snippetFinalTabstopHighlightBackground": "#000000",
-        // "editor.snippetFinalTabstopHighlightBorder": "#000000",
-        // "editorLineNumber.foreground": "#000000",
-        // "editorLink.activeForeground": "#000000",
-        // "editorWhitespace.foreground": "#000000",
-        // "editorIndentGuide.background1": "#000000",
-        // "editorIndentGuide.activeBackground1": "#000000",
-        // "editorRuler.foreground": "#000000",
-        // "editorCodeLens.foreground": "#000000",
-        // "editorBracketHighlight.foreground1": "#000000",
-        // "editorBracketHighlight.foreground2": "#000000",
-        // "editorBracketHighlight.foreground3": "#000000",
-        // "editorBracketHighlight.foreground4": "#000000",
-        // "editorBracketHighlight.foreground5": "#000000",
-        // "editorBracketHighlight.foreground6": "#000000",
-        // "editorBracketHighlight.unexpectedBracket.foreground": "#000000",
-        // "editorOverviewRuler.border": "#000000",
-        // "editorOverviewRuler.selectionHighlightForeground": "#000000",
-        // "editorOverviewRuler.wordHighlightForeground": "#000000",
-        // "editorOverviewRuler.wordHighlightStrongForeground": "#000000",
-        // "editorOverviewRuler.modifiedForeground": "#000000",
-        // "editorOverviewRuler.addedForeground": "#000000",
-        // "editorOverviewRuler.deletedForeground": "#00000",
-        // "editorOverviewRuler.errorForeground": "#000000",
-        // "editorOverviewRuler.warningForeground": "#000000",
-        // "editorError.foreground": "#000000",
-        // "editorWarning.foreground": "#000000",
-        // "editorGutter.modifiedBackground": "#00000080",
-        // "editorGutter.addedBackground": "#000000",
-        // "editorGutter.deletedBackground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Diff editor colors                   ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "diffEditor.insertedTextBackground": "#000000",
-        // "diffEditor.removedTextBackground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Chat colors                       ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Inline Chat colors                   ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Panel Chat colors                    ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                  Editor widget colors                  ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "editorWidget.background": "#660044",
-        // "editorSuggestWidget.background": "#660044",
-        // "editorSuggestWidget.foreground": "#ffe5f2",
-        // "editorSuggestWidget.selectedBackground": "#ff007f",
-        // "editorSuggestWidget.selectedForeground": "#330022",
-        // "editorSuggestWidget.border": "#330022",
-        // "editorSuggestWidget.focusHighlightForeground": "#ffd400",
-        // "editorSuggestWidget.highlightForeground": "#4da6ff",
-        // "editorSuggestWidget.selectedIconForeground": "#330022",
-        // "editorSuggestWidgetStatus.foreground": "#000000",
-        // "editorHoverWidget.background": "#000000",
-        // "editorHoverWidget.border": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Peek view colors                    ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                 Merge conflicts colors                 ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Panel colors                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "panel.background": "#660044",
-        // "panel.border": "#000000",
-        // "panelTitle.activeBorder": "#000000",
-        // "panelTitle.activeForeground": "#000000",
-        // "panelTitle.inactiveForeground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Status Bar colors                    ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "statusBar.background": "#b300b2",
-        // "statusBar.foreground": "#ffe5f2",
-        // "statusBar.debuggingBackground": "#000000",
-        // "statusBar.debuggingForeground": "#000000",
-        // "statusBar.noFolderBackground": "#000000",
-        // "statusBar.noFolderForeground": "#000000",
-        // "statusBarItem.prominentBackground": "#000000",
-        // "statusBarItem.prominentHoverBackground": "#000000",
-        // "statusBarItem.remoteForeground": "#000000",
-        // "statusBarItem.remoteBackground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Title Bar colors                    ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        "titleBar.activeBackground": "#330022",
-        "titleBar.activeForeground": "#ff80bf",
-        // "titleBar.inactiveBackground": "#000000",
-        // "titleBar.inactiveForeground": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Menu Bar colors                     ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        "menu.background": "#660044",
-        "menu.foreground": "#ffe5f2",
-        // "menu.border": "#660044",
-        // "menu.selectionBackground": "#ff007f",
-        // "menu.selectionForeground": "#330022",
-        // "menu.selectionBorder": "#ff007f",
-        // "menu.separatorBackground": "#ff007f80",
-        // "menubar.selectionBackground": "#ff007f",
-        // "menubar.selectionBorder": "#ff007f",
-        // "menubar.selectionForeground": "#330022",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                 Command Center colors                  ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                  Notification colors                   ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                     Banner colors                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Extensions colors                    ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                  Quick picker colors                   ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                Keybinding label colors                 ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║             Keyboard shorcut table colors              ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║               Integrated Terminal colors               ║
-        // ╚════════════════════════════════════════════════════════╝
-        //
-        // "terminal.background": "#330022",
-        // "terminal.foreground": "#000000",
-        // "terminal.ansiBrightBlack": "#000000",
-        // "terminal.ansiBrightRed": "#000000",
-        // "terminal.ansiBrightGreen": "#000000",
-        // "terminal.ansiBrightYellow": "#000000",
-        // "terminal.ansiBrightBlue": "#000000",
-        // "terminal.ansiBrightMagenta": "#000000",
-        // "terminal.ansiBrightCyan": "#000000",
-        // "terminal.ansiBrightWhite": "#000000",
-        // "terminal.ansiBlack": "#000000",
-        // "terminal.ansiRed": "#000000",
-        // "terminal.ansiGreen": "#000000",
-        // "terminal.ansiYellow": "#000000",
-        // "terminal.ansiBlue": "#000000",
-        // "terminal.ansiMagenta": "#000000",
-        // "terminal.ansiCyan": "#000000",
-        // "terminal.ansiWhite": "#000000",
-        //
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Debug colors                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                     Testing colors                     ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                  Welcome page colors                   ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                       Git colors                       ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║              Source Control Graph colors               ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                 Settings Editor colors                 ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Breadcrumbs colors                   ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Snippets colors                     ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                  Symbol Icons colors                   ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Debug Icons colors                   ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Notebook colors                     ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Chart colors                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Ports colors                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                  Comments View colors                  ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                   Action Bar colors                    ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║               Simple Find Widget colors                ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                      Gauge colors                      ║
-        // ╚════════════════════════════════════════════════════════╝
-        // ╔════════════════════════════════════════════════════════╗
-        // ║                    Extension colors                    ║
-        // ╚════════════════════════════════════════════════════════╝
-    }
+  "editor.minimap.enabled": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "editor.fontFamily": "'Maple Mono NF CN'",
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorCustomizations": {
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Contrast colors                     ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "contrastActiveBorder": "#ff007f80",
+    // "contrastBorder": "#ff007f80",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Base colors                       ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    "focusBorder": "#ff007f",
+    "foreground": "#ff80bf",
+    "disabledForeground": "#000000",
+    "widget.border": "#ff007f80",
+    // "widget.shadow": "#000000",
+    "selection.background": "#330022",
+    // "descriptionForeground": "#000000",
+    // "errorForeground": "#ff002b",
+    // "icon.foreground": "#000000",
+    // "sash.hoverBorder": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                     Window border                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "window.activeBorder": "#000000",
+    // "window.inactiveBorder": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Text colors                       ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "textBlockQuote.background": "#000000",
+    // "textBlockQuote.border": "#000000",
+    // "textCodeBlock.background": "#000000",
+    // "textLink.activeForeground": "#000000",
+    // "textLink.foreground": "#000000",
+    // "textPreformat.foreground": "#000000",
+    // "textPreformat.background": "#000000",
+    // "textSeparator.foreground": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                     Action colors                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "toolbar.hoverBackground": "#000000",
+    // "toolbar.activeBackground": "#000000",
+    // "toolbar.hoverOutline": "#000000",
+    // "editorActionList.background": "#000000",
+    // "editorActionList.foreground": "#000000",
+    // "editorActionList.focusForeground": "#000000",
+    // "editorActionList.focusBackground": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                     Button control                     ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "button.background": "#000000",
+    // "button.foreground": "#000000",
+    // "button.border": "#000000",
+    // "button.separator": "#000000",
+    // "button.hoverBackground": "#000000",
+    // "button.secondaryForeground": "#000000",
+    // "button.secondaryBackground": "#000000",
+    // "button.secondaryHoverBackground": "#000000",
+    // "checkbox.background": "#000000",
+    // "checkbox.foreground": "#000000",
+    // "checkbox.disabled.background": "#000000",
+    // "checkbox.disabled.foreground": "#000000",
+    // "checkbox.border": "#000000",
+    // "checkbox.selectBackground": "#000000",
+    // "checkbox.selectBorder": "#000000",
+    // "radio.activeForeground": "#000000",
+    // "radio.activeBackground": "#000000",
+    // "radio.activeBorder": "#000000",
+    // "radio.inactiveForeground":"#000000",
+    // "radio.inactiveBackground":"#000000",
+    // "radio.inactiveBorder": "#000000",
+    // "radio.inactiveHoverBackground":"#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Dropdown control                    ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "dropdown.background": "#000000",
+    // "dropdown.listBackground": "#000000",
+    // "dropdown.border": "#000000",
+    // "dropdown.foreground": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                     Input control                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "input.background": "#000000",
+    // "input.border": "#000000",
+    // "input.foreground": "#000000",
+    // "input.placeholderForeground": "#000000",
+    // "inputOption.activeBackground": "#000000",
+    // "inputOption.activeBorder": "#000000",
+    // "inputOption.activeForeground": "#000000",
+    // "inputOption.hoverBackground": "#000000",
+    // "inputValidation.errorBackground": "#000000",
+    // "inputValidation.errorForeground": "#000000",
+    // "inputValidation.errorBorder": "#000000",
+    // "inputValidation.infoBackground": "#000000",
+    // "inputValidation.infoForeground": "#000000",
+    // "inputValidation.infoBorder": "#000000",
+    // "inputValidation.warningBackground": "#000000",
+    // "inputValidation.warningForeground": "#000000",
+    // "inputValidation.warningBorder": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Scrollbar control                    ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "scrollbar.shadow": "#000000",
+    // "scrollbarSlider.activeBackground": "#000000",
+    // "scrollbarSlider.background": "#000000",
+    // "scrollbarSlider.hoverBackground": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                         Badge                          ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "badge.foreground": "#330022",
+    // "badge.background": "#ffd400",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Progress bar                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "progressBar.background": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Lists and trees                     ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "list.activeSelectionBackground": "#000000",
+    // "list.activeSelectionForeground": "#000000",
+    // "list.dropBackground": "#ff007f",
+    // "list.focusBackground": "#000000",
+    // "list.highlightForeground": "#000000",
+    // "list.hoverBackground": "#000000",
+    // "list.inactiveSelectionBackground": "#000000",
+    // "list.warningForeground": "#000000",
+    // "list.errorForeground": "#000000",
+    // "listFilterWidget.background": "#000000",
+    // "listFilterWidget.outline": "#000000",
+    // "listFilterWidget.noMatchesOutline": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Activity Bar                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    "activityBar.background": "#660044",
+    "activityBar.inactiveForeground": "#FFFFFF80",
+    "activityBar.foreground": "#ffd400",
+    "activityBar.border": "#ff007f80",
+    "activityBar.activeBorder": "#ffd400",
+    "activityBar.activeBackground": "#660044",
+    "activityBar.activeFocusBorder": "#ff007f80",
+    "activityBarBadge.background": "#ffd400",
+    "activityBarBadge.foreground": "#330022",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                        Profiles                        ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                        Side Bar                        ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    "sideBar.background": "#440033",
+    "sideBarTitle.foreground": "#ffe5f2",
+    "sideBarSectionHeader.background": "#330022",
+    "sideBarSectionHeader.border": "#ff007f80",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                        Minimap                         ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                  Editor Groups & Tabs                  ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "editorGroup.border": "#ff007f80",
+    // "editorGroup.dropBackground": "#66004440",
+    // "editorGroupHeader.tabsBackground": "#330022",
+    // "tab.activeBackground": "#660044",
+    // "tab.activeForeground": "#ffd400",
+    // "tab.border": "#ff007f80",
+    // "tab.activeBorderTop": "#ff007f80",
+    // "tab.inactiveBackground": "#660044c0",
+    // "tab.inactiveForeground": "#ffe5f2",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                     Editor colors                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    "editor.foreground": "#ffe5f2",
+    "editor.background": "#330022",
+    // "editor.selectionBackground": "#660044",
+    // "editor.selectionHighlightBackground": "#000000",
+    // "editor.foldBackground": "#00000080",
+    // "editor.wordHighlightBackground": "#660044",
+    // "editor.wordHighlightStrongBackground": "#ffd400",
+    // "editor.findMatchBackground": "#ff007f",
+    // "editor.findMatchHighlightBackground": "#000000",
+    // "editor.findRangeHighlightBackground": "#000000",
+    // "editor.hoverHighlightBackground": "#000000",
+    // "editor.lineHighlightBorder": "#000000",
+    // "editor.rangeHighlightBackground": "#000000",
+    // "editor.snippetTabstopHighlightBackground": "#000000",
+    // "editor.snippetTabstopHighlightBorder": "#000000",
+    // "editor.snippetFinalTabstopHighlightBackground": "#000000",
+    // "editor.snippetFinalTabstopHighlightBorder": "#000000",
+    // "editorLineNumber.foreground": "#000000",
+    // "editorLink.activeForeground": "#000000",
+    // "editorWhitespace.foreground": "#000000",
+    // "editorIndentGuide.background1": "#000000",
+    // "editorIndentGuide.activeBackground1": "#000000",
+    // "editorRuler.foreground": "#000000",
+    // "editorCodeLens.foreground": "#000000",
+    // "editorBracketHighlight.foreground1": "#000000",
+    // "editorBracketHighlight.foreground2": "#000000",
+    // "editorBracketHighlight.foreground3": "#000000",
+    // "editorBracketHighlight.foreground4": "#000000",
+    // "editorBracketHighlight.foreground5": "#000000",
+    // "editorBracketHighlight.foreground6": "#000000",
+    // "editorBracketHighlight.unexpectedBracket.foreground": "#000000",
+    // "editorOverviewRuler.border": "#000000",
+    // "editorOverviewRuler.selectionHighlightForeground": "#000000",
+    // "editorOverviewRuler.wordHighlightForeground": "#000000",
+    // "editorOverviewRuler.wordHighlightStrongForeground": "#000000",
+    // "editorOverviewRuler.modifiedForeground": "#000000",
+    // "editorOverviewRuler.addedForeground": "#000000",
+    // "editorOverviewRuler.deletedForeground": "#00000",
+    // "editorOverviewRuler.errorForeground": "#000000",
+    // "editorOverviewRuler.warningForeground": "#000000",
+    // "editorError.foreground": "#000000",
+    // "editorWarning.foreground": "#000000",
+    // "editorGutter.modifiedBackground": "#00000080",
+    // "editorGutter.addedBackground": "#000000",
+    // "editorGutter.deletedBackground": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Diff editor colors                   ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "diffEditor.insertedTextBackground": "#000000",
+    // "diffEditor.removedTextBackground": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Chat colors                       ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Inline Chat colors                   ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Panel Chat colors                    ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                  Editor widget colors                  ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "editorWidget.background": "#660044",
+    // "editorSuggestWidget.background": "#660044",
+    // "editorSuggestWidget.foreground": "#ffe5f2",
+    // "editorSuggestWidget.selectedBackground": "#ff007f",
+    // "editorSuggestWidget.selectedForeground": "#330022",
+    // "editorSuggestWidget.border": "#330022",
+    // "editorSuggestWidget.focusHighlightForeground": "#ffd400",
+    // "editorSuggestWidget.highlightForeground": "#4da6ff",
+    // "editorSuggestWidget.selectedIconForeground": "#330022",
+    // "editorSuggestWidgetStatus.foreground": "#000000",
+    // "editorHoverWidget.background": "#000000",
+    // "editorHoverWidget.border": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Peek view colors                    ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                 Merge conflicts colors                 ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Panel colors                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "panel.background": "#660044",
+    // "panel.border": "#000000",
+    // "panelTitle.activeBorder": "#000000",
+    // "panelTitle.activeForeground": "#000000",
+    // "panelTitle.inactiveForeground": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Status Bar colors                    ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    "statusBar.background": "#330022",
+    "statusBar.foreground": "#ff007f",
+    // "statusBar.debuggingBackground": "#000000",
+    // "statusBar.debuggingForeground": "#000000",
+    // "statusBar.noFolderBackground": "#000000",
+    // "statusBar.noFolderForeground": "#000000",
+    // "statusBarItem.prominentBackground": "#000000",
+    // "statusBarItem.prominentHoverBackground": "#000000",
+    // "statusBarItem.remoteForeground": "#000000",
+    // "statusBarItem.remoteBackground": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Title Bar colors                    ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    "titleBar.activeBackground": "#660044",
+    "titleBar.activeForeground": "#ffe5f2",
+    "titleBar.inactiveBackground": "#330022",
+    "titleBar.inactiveForeground": "#ffe5f2",
+    "titleBar.border": "#ff007f80",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Menu Bar colors                     ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    "menu.background": "#660044",
+    "menu.foreground": "#ffe5f2",
+    "menu.border": "#660044",
+    "menu.selectionBackground": "#ff007f",
+    "menu.selectionForeground": "#330022",
+    "menu.selectionBorder": "#ff007f",
+    "menu.separatorBackground": "#ff007f80",
+    "menubar.selectionBackground": "#ff007f",
+    "menubar.selectionBorder": "#ff007f",
+    "menubar.selectionForeground": "#330022",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                 Command Center colors                  ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                  Notification colors                   ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                     Banner colors                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Extensions colors                    ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                  Quick picker colors                   ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                Keybinding label colors                 ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║             Keyboard shorcut table colors              ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║               Integrated Terminal colors               ║
+    // ╚════════════════════════════════════════════════════════╝
+    //
+    // "terminal.background": "#330022",
+    // "terminal.foreground": "#000000",
+    // "terminal.ansiBrightBlack": "#000000",
+    // "terminal.ansiBrightRed": "#000000",
+    // "terminal.ansiBrightGreen": "#000000",
+    // "terminal.ansiBrightYellow": "#000000",
+    // "terminal.ansiBrightBlue": "#000000",
+    // "terminal.ansiBrightMagenta": "#000000",
+    // "terminal.ansiBrightCyan": "#000000",
+    // "terminal.ansiBrightWhite": "#000000",
+    // "terminal.ansiBlack": "#000000",
+    // "terminal.ansiRed": "#000000",
+    // "terminal.ansiGreen": "#000000",
+    // "terminal.ansiYellow": "#000000",
+    // "terminal.ansiBlue": "#000000",
+    // "terminal.ansiMagenta": "#000000",
+    // "terminal.ansiCyan": "#000000",
+    // "terminal.ansiWhite": "#000000",
+    //
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Debug colors                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                     Testing colors                     ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                  Welcome page colors                   ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                       Git colors                       ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║              Source Control Graph colors               ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                 Settings Editor colors                 ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Breadcrumbs colors                   ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Snippets colors                     ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                  Symbol Icons colors                   ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Debug Icons colors                   ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Notebook colors                     ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Chart colors                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Ports colors                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                  Comments View colors                  ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                   Action Bar colors                    ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║               Simple Find Widget colors                ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                      Gauge colors                      ║
+    // ╚════════════════════════════════════════════════════════╝
+    // ╔════════════════════════════════════════════════════════╗
+    // ║                    Extension colors                    ║
+    // ╚════════════════════════════════════════════════════════╝
+  }
 }

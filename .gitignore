@@ -118,3 +118,5 @@
 !/.config/VSCodium/
 !/.config/VSCodium/User/
 !/.config/VSCodium/User/settings.json
+!/.config/niri/
+!/.config/niri/config.kdl
