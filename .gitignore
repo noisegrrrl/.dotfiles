@@ -120,3 +120,6 @@
 !/.config/VSCodium/User/settings.json
 !/.config/niri/
 !/.config/niri/config.kdl
+!/.niri-deps
+!/.config/mako/
+!/.config/mako/*

@@ -1,8 +1,5 @@
 {
-  "editor.minimap.enabled": false,
-  "diffEditor.hideUnchangedRegions.enabled": true,
   "editor.fontFamily": "'Maple Mono NF CN'",
-  "git.openRepositoryInParentFolders": "never",
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.colorCustomizations": {
     // ╔════════════════════════════════════════════════════════╗
@@ -436,5 +433,7 @@
     // ╔════════════════════════════════════════════════════════╗
     // ║                    Extension colors                    ║
     // ╚════════════════════════════════════════════════════════╝
-  }
+  },
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true
 }
