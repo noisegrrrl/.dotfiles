@@ -101,6 +101,7 @@
 #
 # --- Add your entries below this line:
 !/.colours
+!/.niri-deps
 !/.config/
 !/.config/hypr/
 !/.config/hypr/**
@@ -112,7 +113,7 @@
 !/.config/kitty/
 !/.config/kitty/*
 !/.config/kitty/themes
-!/.config/kitty/themes/*
+!/.config/kitty/themes/custom-theme.conf
 !/.config/waybar/
 !/.config/waybar/**
 !/.config/VSCodium/
@@ -120,6 +121,5 @@
 !/.config/VSCodium/User/settings.json
 !/.config/niri/
 !/.config/niri/config.kdl
-!/.niri-deps
 !/.config/mako/
 !/.config/mako/*
