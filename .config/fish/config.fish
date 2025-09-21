@@ -46,6 +46,10 @@ alias grep='grep --color=auto'
 alias fgrep='grep -F --color=auto'
 alias egrep='grep -E --color=auto'
 
+## ---- dotfiles management ---- ##
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 # alias tarnow='tar -acf '
 # alias untar='tar -zxvf '
 # alias wget='wget -c '
