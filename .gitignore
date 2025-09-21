@@ -100,26 +100,25 @@
 #     No.
 #
 # --- Add your entries below this line:
-!/.colours
-!/.niri-deps
 !/.config/
 !/.config/hypr/
 !/.config/hypr/**
-!/.config/uwsm/
-!/.config/uwsm/**
 !/.config/fish/
 !/.config/fish/functions/
 !/.config/fish/functions/**
 !/.config/kitty/
-!/.config/kitty/*
-!/.config/kitty/themes
-!/.config/kitty/themes/custom-theme.conf
+!/.config/kitty/**
 !/.config/waybar/
 !/.config/waybar/**
-!/.config/VSCodium/
-!/.config/VSCodium/User/
-!/.config/VSCodium/User/settings.json
 !/.config/niri/
 !/.config/niri/config.kdl
 !/.config/mako/
-!/.config/mako/*
+!/.config/mako/**
+!/.config/fuzzel/
+!/.config/fuzzel/**
+!/.config/vim/
+!/.config/vim/vimrc
+!/.config/vim/colors/
+!/.config/vim/colors/**
+!/.config/foot/
+!/.config/foot/**

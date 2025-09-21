@@ -1,0 +1,38 @@
+
+# vim:ft=kitty
+## author: noisegrrrl
+
+foreground                      #ff007f
+background                      #330022
+selection_foreground            #330022
+selection_background            #ff007f
+
+color0 #330022
+color8 #660044
+
+color1 #d7001a
+color9 #d7001a
+
+color2 #ffd400
+color10 #ffd400
+
+color3 #ff80bf
+color11 #ff80bf
+
+color4 #cb00ca
+color12  #cb00ca
+
+color5 #007cfa
+color13 #007cfa
+
+color6 #4da6ff
+color14  #4da6ff
+
+color7  #ff80bf
+color15 #ffe5f2
+
+cursor                          #ffd400
+url_color                       #ffe5f2
+
+active_border_color             #b300b2
+inactive_border_color           #660044

@@ -1,0 +1,14 @@
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
+set nocompatible
+
+set mouse=
+
+set number
+set relativenumber
+
+set splitright
+set splitbelow
+
+set autoindent

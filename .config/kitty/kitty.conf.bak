@@ -5,7 +5,7 @@ font_family Maple Mono NF CN
 # END_KITTY_FONTS
 
 # BEGIN_KITTY_THEME
-# Root-Loops-Darker
+# Root-Loops
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -16,3 +16,5 @@ hide_window_decorations yes
 tab_bar_style powerline
 
 enable_audio_bell no
+
+text_fg_override_threshold 7 ratio 
