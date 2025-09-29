@@ -1,16 +1,27 @@
 # source /usr/share/cachyos-fish-config/cachyos-config.fish
 
-# override cachyos default fish_greeting
-#function fish_greeting
-#    if test "$(tput cols)" -ge 120; and test "$(tput lines)" -ge 50
-#        fastfetch
-#    end
-#end
-
-set -gx EDITOR vim 
+set -Ux EDITOR vim 
+set -Ux VISUAL vim
 set -gx GPG_TTY $(tty)
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+
+# Format man pages
+set -x MANROFFOPT "-c"
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+# Add ~/.local/bin to PATH
+if test -d ~/.local/bin
+    if not contains ~/.local/bin $PATH
+        set -Ux PATH ~/.local/bin $PATH
+    end
+end
+
+# Add volta to PATH
+if test -d ~/.volta
+	set -gx VOLTA_HOME ~/.volta
+	if not contains $VOLTA_HOME/bin $PATH
+		set -Ux PATH $VOLTA_HOME/bin $PATH
+	end
+end
 
 ### ----- aliases ----- ###
 ## ---- ls ---- ##
@@ -29,22 +40,11 @@ alias mirror="sudo cachyos-rate-mirrors" # Get fastest mirrors
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)' # Cleanup orphaned packages
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" # List recently installed packages
-
-## ---- navigation ---- ##
-
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
+alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB
 
 ## ---- misc ---- ##
 
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='grep -F --color=auto'
-alias egrep='grep -E --color=auto'
+alias cat='bat -pp --color=auto'
 
 ## ---- dotfiles management ---- ##
 
@@ -55,8 +55,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # alias wget='wget -c '
 # alias psmem='ps auxf | sort -nr -k 4'
 # alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-# alias hw='hwinfo --short'                                   # Hardware Info
-# alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB
+alias hw='hwinfo --short'                                   # Hardware Info
 # alias tb='nc termbin.com 9999'
 
 # Get the error messages from journalctl

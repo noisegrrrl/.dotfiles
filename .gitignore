@@ -117,6 +117,8 @@
 !/.config/mako/**
 !/.config/niri/
 !/.config/niri/config.kdl
+!/.config/nvim/
+!/.config/nvim/**
 !/.config/vim/
 !/.config/vim/colors/
 !/.config/vim/colors/**

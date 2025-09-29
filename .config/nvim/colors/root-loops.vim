@@ -1,10 +1,10 @@
-" Store the following config under ~/.vim/colors/root-loops.vim
-" then load it into vim via ':colorscheme root-loops' or by declaring
-" it as your colorscheme in your .vimrc.
+" Store the following config under ~/.config/nvim/colors/root-loops.vim
+" then load it into neovim via ':colorscheme root-loops' or by declaring
+" it as your colorscheme in your neovim config.
 
 " root-loops.vim -- Root Loops Vim Color Scheme.
 " Webpage:          https://rootloops.sh?sugar=8&colors=10&sogginess=7&flavor=0&fruit=0&milk=0
-" Description:      A vim color scheme for cereal lovers
+" Description:      A neovim color scheme for cereal lovers
 
 hi clear
 
@@ -12,7 +12,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "root-loops-darker"
+let colors_name = "root loops"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Normal ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
@@ -101,6 +101,48 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi diffFile ctermfg=12 guifg=#85cdff
     hi diffLine ctermfg=7 guifg=#f09db6
     hi diffIndexLine ctermfg=14 guifg=#00e3c8
+    hi healthError ctermfg=1 guifg=#ff7daa
+    hi healthSuccess ctermfg=2 guifg=#a1bd00
+    hi healthWarning ctermfg=3 guifg=#fc8e00
+    hi NormalFloat ctermbg=0 ctermfg=15 guibg=#150208 guifg=#fad9e1
+    hi FloatBorder ctermbg=0 ctermfg=7 guibg=#150208 guifg=#f09db6
+    hi FloatShadow ctermbg=0 ctermfg=15 guibg=#3e0e21 guifg=#fad9e1
+    hi @variable ctermfg=15 guifg=#fad9e1
+    hi @variable.builtin ctermfg=1 guifg=#ff7daa
+    hi @variable.parameter ctermfg=1 guifg=#ff7daa
+    hi @variable.member ctermfg=1 guifg=#ff7daa
+    hi @constant.builtin ctermfg=5 guifg=#bd96ff
+    hi @string.regexp ctermfg=1 guifg=#ff7daa
+    hi @string.escape ctermfg=6 guifg=#00cab1
+    hi @string.special.url ctermfg=4 cterm=underline guifg=#47b9ff gui=underline
+    hi @string.special.symbol ctermfg=13 guifg=#ceb4ff
+    hi @type.builtin ctermfg=3 guifg=#fc8e00
+    hi @property ctermfg=1 guifg=#ff7daa
+    hi @function.builtin ctermfg=5 guifg=#bd96ff
+    hi @constructor ctermfg=11 guifg=#ffb06d
+    hi @keyword.function ctermfg=5 guifg=#bd96ff
+    hi @keyword.return ctermfg=5 guifg=#bd96ff
+    hi @keyword.export ctermfg=12 guifg=#85cdff
+    hi @punctuation.bracket ctermfg=15 guifg=#fad9e1
+    hi @comment.error ctermbg=9 ctermfg=0 guibg=#ffa6c1 guifg=#150208
+    hi @comment.warning ctermbg=11 ctermfg=0 guibg=#ffb06d guifg=#150208
+    hi @comment.todo ctermbg=12 ctermfg=0 guibg=#85cdff guifg=#150208
+    hi @comment.note ctermbg=14 ctermfg=0 guibg=#00e3c8 guifg=#150208
+    hi @markup ctermfg=15 guifg=#fad9e1
+    hi @markup.strong ctermfg=15 cterm=bold guifg=#fad9e1 gui=bold
+    hi @markup.italic ctermfg=15 cterm=italic guifg=#fad9e1 gui=italic
+    hi @markup.strikethrough ctermfg=15 cterm=strikethrough guifg=#fad9e1 gui=strikethrough
+    hi @markup.heading ctermfg=4 cterm=bold guifg=#47b9ff gui=bold
+    hi @markup.quote ctermfg=6 guifg=#00cab1
+    hi @markup.math ctermfg=4 guifg=#47b9ff
+    hi @markup.link.url ctermfg=5 cterm=underline guifg=#bd96ff gui=underline
+    hi @markup.raw ctermfg=14 guifg=#00e3c8
+    hi @markup.list.checked ctermfg=2 guifg=#a1bd00
+    hi @markup.list.unchecked ctermfg=7 guifg=#f09db6
+    hi @tag ctermfg=5 guifg=#bd96ff
+    hi @tag.builtin ctermfg=6 guifg=#00cab1
+    hi @tag.attribute ctermfg=4 guifg=#47b9ff
+    hi @tag.delimiter ctermfg=15 guifg=#fad9e1
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
@@ -190,6 +232,48 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi diffFile ctermfg=12
     hi diffLine ctermfg=7
     hi diffIndexLine ctermfg=14
+    hi healthError ctermfg=1
+    hi healthSuccess ctermfg=2
+    hi healthWarning ctermfg=3
+    hi NormalFloat ctermbg=0 ctermfg=15
+    hi FloatBorder ctermbg=0 ctermfg=7
+    hi FloatShadow ctermbg=0 ctermfg=15
+    hi @variable ctermfg=15
+    hi @variable.builtin ctermfg=1
+    hi @variable.parameter ctermfg=1
+    hi @variable.member ctermfg=1
+    hi @constant.builtin ctermfg=5
+    hi @string.regexp ctermfg=1
+    hi @string.escape ctermfg=6
+    hi @string.special.url ctermfg=4 cterm=underline
+    hi @string.special.symbol ctermfg=13
+    hi @type.builtin ctermfg=3
+    hi @property ctermfg=1
+    hi @function.builtin ctermfg=5
+    hi @constructor ctermfg=11
+    hi @keyword.function ctermfg=5
+    hi @keyword.return ctermfg=5
+    hi @keyword.export ctermfg=12
+    hi @punctuation.bracket ctermfg=15
+    hi @comment.error ctermbg=9 ctermfg=0
+    hi @comment.warning ctermbg=11 ctermfg=0
+    hi @comment.todo ctermbg=12 ctermfg=0
+    hi @comment.note ctermbg=14 ctermfg=0
+    hi @markup ctermfg=15
+    hi @markup.strong ctermfg=15 cterm=bold
+    hi @markup.italic ctermfg=15 cterm=italic
+    hi @markup.strikethrough ctermfg=15 cterm=strikethrough
+    hi @markup.heading ctermfg=4 cterm=bold
+    hi @markup.quote ctermfg=6
+    hi @markup.math ctermfg=4
+    hi @markup.link.url ctermfg=5 cterm=underline
+    hi @markup.raw ctermfg=14
+    hi @markup.list.checked ctermfg=2
+    hi @markup.list.unchecked ctermfg=7
+    hi @tag ctermfg=5
+    hi @tag.builtin ctermfg=6
+    hi @tag.attribute ctermfg=4
+    hi @tag.delimiter ctermfg=15
 endif
 
 hi link EndOfBuffer NonText
@@ -209,6 +293,52 @@ hi link WinBarNC StatusLineNC
 hi link lCursor Cursor
 hi link CursorIM Cursor
 hi link Terminal Normal
+hi link @variable.parameter.builtin @variable.parameter
+hi link @constant Constant
+hi link @constant.macro Macro
+hi link @module Structure
+hi link @module.builtin Special
+hi link @label Label
+hi link @string String
+hi link @string.special Special
+hi link @character Character
+hi link @character.special SpecialChar
+hi link @boolean Boolean
+hi link @number Number
+hi link @number.float Float
+hi link @type Type
+hi link @type.definition Type
+hi link @attribute Constant
+hi link @attribute.builtin Constant
+hi link @function Function
+hi link @function.call Function
+hi link @function.method Function
+hi link @function.method.call Function
+hi link @operator Operator
+hi link @keyword Keyword
+hi link @keyword.coroutine Keyword
+hi link @keyword.operator Operator
+hi link @keyword.import Include
+hi link @keyword.type Keyword
+hi link @keyword.modifier Keyword
+hi link @keyword.repeat Repeat
+hi link @keyword.debug Exception
+hi link @keyword.exception Exception
+hi link @keyword.conditional Conditional
+hi link @keyword.conditional.ternary Operator
+hi link @keyword.directive PreProc
+hi link @keyword.directive.define Define
+hi link @punctuation.delimiter Delimiter
+hi link @punctuation.special Special
+hi link @comment Comment
+hi link @comment.documentation Comment
+hi link @markup.underline underline
+hi link @markup.link Tag
+hi link @markup.link.label Label
+hi link @markup.list Special
+hi link @diff.plus diffAdded
+hi link @diff.minus diffRemoved
+hi link @diff.delta diffChanged
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
     let g:terminal_ansi_colors = [ '#3e0e21', '#ff7daa', '#a1bd00', '#fc8e00', '#47b9ff', '#bd96ff', '#00cab1', '#f09db6', '#882a4f', '#ffa6c1', '#b5d500', '#ffb06d', '#85cdff', '#ceb4ff', '#00e3c8', '#fcecf0' ]
