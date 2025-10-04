@@ -49,7 +49,8 @@ alias vim='nvim'
 
 ## ---- dotfiles management ---- ##
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dv='GIT_DIR="$HOME/.dotfiles" GIT_WORK_TREE="$HOME" vim $HOME'
 
 # alias tarnow='tar -acf '
 # alias untar='tar -zxvf '
