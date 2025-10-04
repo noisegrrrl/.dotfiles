@@ -1,7 +1,7 @@
 # source /usr/share/cachyos-fish-config/cachyos-config.fish
 
-set -Ux EDITOR vim 
-set -Ux VISUAL vim
+set -Ux EDITOR nvim 
+set -Ux VISUAL nvim
 set -gx GPG_TTY $(tty)
 
 # Format man pages
@@ -45,6 +45,7 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed pac
 ## ---- misc ---- ##
 
 alias cat='bat -pp --color=auto'
+alias vim='nvim'
 
 ## ---- dotfiles management ---- ##
 
