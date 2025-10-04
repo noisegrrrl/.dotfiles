@@ -10,6 +10,7 @@ vim.o.smarttab = true
 vim.o.expandtab = true
 vim.o.wrap = false
 vim.o.clipboard = "unnamedplus"
+vim.o.termguicolors = true
 
 vim.g.mapleader = " "
 
@@ -23,17 +24,15 @@ vim.keymap.set('n', '<leader>e', ':Explore<CR>')
 vim.pack.add {
     { src = 'https://github.com/neovim/nvim-lspconfig' },
     { src = 'https://github.com/nvim-tree/nvim-tree.lua' },
-    { src = 'https://github.com/stevearc/oil.nvim' },
+    -- { src = 'https://github.com/stevearc/oil.nvim' },
     { src = 'https://github.com/tidalcycles/vim-tidal' }
 }
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- optionally enable 24-bit colour
-vim.opt.termguicolors = true
-
+-- vim.pack.update()
+vim.pack.get()
 -- empty setup using defaults
 require("nvim-tree").setup()
 
