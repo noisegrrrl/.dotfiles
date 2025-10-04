@@ -1,6 +1,10 @@
 -- vim.env.GIT_WORK_TREE = vim.fn.expand("~")
 -- vim.env.GIT_DIR = vim.fn.expand("~/.dotfiles")
 
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.tabstop = 8
@@ -18,21 +22,16 @@ vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-vim.keymap.set({'n', 'v', 'o'}, '<CR>', ':') -- map enter to cmdline mode
+vim.keymap.set({ 'n', 'v', 'o' }, '<CR>', ':') -- map enter to cmdline mode
 vim.keymap.set('n', '<leader>e', ':Explore<CR>')
 
 vim.pack.add {
     { src = 'https://github.com/neovim/nvim-lspconfig' },
     { src = 'https://github.com/nvim-tree/nvim-tree.lua' },
-    -- { src = 'https://github.com/stevearc/oil.nvim' },
+    { src = 'https://github.com/nvim-tree/nvim-web-devicons' },
     { src = 'https://github.com/tidalcycles/vim-tidal' }
 }
 
--- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
--- vim.pack.update()
-vim.pack.get()
 -- empty setup using defaults
 require("nvim-tree").setup()
 
