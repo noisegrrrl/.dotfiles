@@ -1,0 +1,33 @@
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
+set nocompatible
+
+set mouse=
+
+set number
+set relativenumber
+
+set splitright
+set splitbelow
+
+set autoindent
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set smarttab
+set expandtab
+
+set termguicolors
+source ~/.config/vim/colors/root-loops-darker.vim
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^Eterm'
+  set t_Co=16
+endif
+
+" Yank selected text to system clipboard using wl-copy
+vnoremap <leader>y :w !wl-copy<CR><CR>
+
+" Paste from system clipboard using wl-paste
+nnoremap <leader>p :r !wl-paste<CR>
