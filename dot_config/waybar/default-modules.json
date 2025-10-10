@@ -1,6 +1,19 @@
 {
-  "clock":
-  {
-    "format": "{:%a, %d. %b  %H:%M}"
-  }
+    "clock":
+    {
+        "format": "{:%a, %d. %b  %H:%M}",
+        "tooltip": false
+    }, 
+    "power-profiles-daemon":
+    {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    }
 }
