@@ -1,4 +1,5 @@
-vim.lsp.enable({ 'lua_ls' })
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('fish_lsp')
 
 vim.lsp.config('lua_ls', {
     on_init = function(client)

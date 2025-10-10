@@ -147,8 +147,6 @@ binds {
 //
 
 spawn-at-startup "wlsunset" "-l" "48.8" "-L" "2.3"
-spawn-at-startup "waypaper" "--restore"
-spawn-at-startup "waybar"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
