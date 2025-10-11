@@ -10,5 +10,6 @@ require 'chezmoi-config'
 -- vim.g.loaded_netrwPlugin = 1
 
 vim.g.tidal_target = "terminal"
-
-vim.cmd("colorscheme root-loops")
+vim.g.vim_niri_nav_workspace = "true"
+-- vim.cmd("colorscheme root-loops")
+vim.cmd("colorscheme ashen")
