@@ -1,26 +1,15 @@
-set -Ux EDITOR nvim 
-set -Ux VISUAL nvim
+set -gx EDITOR nvim 
+set -gx VISUAL nvim
 set -gx GPG_TTY $(tty)
 
 # format man pages
 set -x MANROFFOPT "-c"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-# add ~/.local/bin to PATH
-if test -d ~/.local/bin
-    if not contains ~/.local/bin $PATH
-        set -Ux PATH ~/.local/bin $PATH
-    end
-end
-
-# add volta to PATH
-if test -d ~/.volta
-    set -gx VOLTA_HOME ~/.volta
-    if not contains $VOLTA_HOME/bin $PATH
-        set -Ux PATH $VOLTA_HOME/bin $PATH
-    end
-end
-
+fish_add_path ~/.local/bin
+set -gx VOLTA_HOME ~/.volta
+fish_add_path $VOLTA_HOME/bin
+fish_add_path ~/.local/share/bob/nvim-bin
 #
 alias ls 'eza --color=always --group-directories-first --icons=always' # preferred listing
 abbr ll 'ls -l'
@@ -53,6 +42,21 @@ abbr cze 'vim (chezmoi source-path)'
 alias czg 'git --git-dir=(chezmoi source-path)/.git --work-tree=(chezmoi source-path)'
 #
 abbr wr killall -SIGUSR2 waybar
+#
+alias spawn 'niri msg action spawn --'
+complete -x -c spawn --no-files -a "(__fish_complete_command)"
+#
+function mvhwp
+    for img in $argv;
+        mv $img $XDG_PICTURES_DIR/wp/h
+    end
+end
+
+function mvvwp
+    for img in $argv;
+        mv $img $XDG_PICTURES_DIR/wp/v
+    end
+end
 # alias fixpacman="sudo rm /var/lib/pacman/db.lck" # Fix pacman db lock
 # alias mirror="sudo cachyos-rate-mirrors" # Get fastest mirrors
 # alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages

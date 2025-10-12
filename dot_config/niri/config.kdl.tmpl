@@ -39,11 +39,14 @@ output "eDP-1" {
 {{ else }}
 output "DP-1" {
     position x=0 y=0
+    mode "2560x1440@164.802"
+    transform "normal"
 }
 
 output "DP-2" {
     position x=2560 y=0
     transform "90"
+    mode "1920x1080@60.000"
     // hot-corners "off"
 }
 {{ end }}
@@ -74,6 +77,8 @@ binds {
     Mod+XF86AudioMute           allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; } 
 
     // ----- Brightness Controls -----
+    // XF86MonBrightnessUp         allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%+"; }
+    // XF86MonBrightnessDown       allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%-"; }
     XF86MonBrightnessUp         allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%+"; }
     XF86MonBrightnessDown       allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%-"; }
     Mod+XF86MonBrightnessDown   hotkey-overlay-title="Cycle wlsunset mode" allow-when-locked=true { spawn "killall" "-SIGUSR1" "wlsunset"; }
@@ -144,10 +149,10 @@ binds {
 
     Mod+Shift+P                 { power-off-monitors; }
 
-    Mod+Left      { spawn "vim-niri-nav" "left" "w"; }
-    Mod+Down      { spawn "vim-niri-nav" "down" "w"; }
-    Mod+Up        { spawn "vim-niri-nav" "up" "w"; }
-    Mod+Right     { spawn "vim-niri-nav" "right" "w"; }
+    Mod+Left                    { spawn "vim-niri-nav" "left" "w"; }
+    Mod+Down                    { spawn "vim-niri-nav" "down" "w"; }
+    Mod+Up                      { spawn "vim-niri-nav" "up" "w"; }
+    Mod+Right                   { spawn "vim-niri-nav" "right" "w"; }
 }
 
 //
@@ -158,13 +163,14 @@ spawn-at-startup "swayosd-server"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
+
 // ────────────── Layout Settings ──────────────
 //
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 
 layout {
-    gaps 8 
-    // center-focused-column "on-overflow"
+    gaps 16 
+    always-center-single-column
     empty-workspace-above-first
 
     preset-column-widths {
@@ -179,8 +185,8 @@ layout {
 
     focus-ring {
         // off
-        width 1
-        active-color "#ffd400"
+        width 2
+        active-color "rgba(196, 105, 61, 1)"
         inactive-color "#505050"
         // active-gradient from="#80c8ff" to="#bbddff" angle=45
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -206,10 +212,10 @@ layout {
     }
 
     struts {
-        left 2
-        right 2
-        top 2 
-        bottom 2 
+        left 4
+        right 4
+        top 4 
+        bottom 4 
     }
 
     tab-indicator {
@@ -230,12 +236,39 @@ layout {
 
 animations {}
 
+workspace "home" {
+    {{ if eq .chezmoi.hostname "phantom-blood" }}
+    open-on-output "DP-1"
+    {{ end }}
+}
+
+workspace "vesktop" {
+    {{ if eq .chezmoi.hostname "phantom-blood" }}
+    open-on-output "DP-2"
+    {{ end }}
+}
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
 window-rule {
-    geometry-corner-radius 6
+    match at-startup=true app-id=r#"^vesktop$"#
+    open-on-workspace "vesktop"
+}
+
+window-rule {
+    match at-startup=true app-id=r#"^Librewolf$"#
+    open-on-workspace "home"
+}
+
+window-rule {
+    match at-startup=true app-id=r#"^foot$"#
+    open-on-workspace "home"
+}
+
+window-rule {
+    geometry-corner-radius 10
     clip-to-geometry true
 }
 
