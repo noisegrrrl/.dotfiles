@@ -50,6 +50,7 @@ output "DP-2" {
     // hot-corners "off"
 }
 {{ end }}
+
 // ────────────── Keybindings ──────────────
 //
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
@@ -67,10 +68,6 @@ binds {
     // Mod+Shift+C                 hotkey-overlay-title="Colour Picker: hyprpicker" { spawn "hyprpicker"; }
 
     // ----- Audio Controls -----
-    // XF86AudioRaiseVolume        allow-when-locked=true { spawn "wpctl" "set-volume" "-l" "1" "@DEFAULT_AUDIO_SINK@" "5%+"; }
-    // XF86AudioLowerVolume        allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
-    // XF86AudioMute               allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    // Mod+XF86AudioMute           allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
     XF86AudioRaiseVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "raise"; }
     XF86AudioLowerVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
     XF86AudioMute               allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
@@ -79,8 +76,8 @@ binds {
     // ----- Brightness Controls -----
     // XF86MonBrightnessUp         allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%+"; }
     // XF86MonBrightnessDown       allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%-"; }
-    XF86MonBrightnessUp         allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%+"; }
-    XF86MonBrightnessDown       allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%-"; }
+    XF86MonBrightnessUp         allow-when-locked=true { spawn "swayosd-client" "--brightness" "raise"; }
+    XF86MonBrightnessDown       allow-when-locked=true { spawn "swayosd-client" "--brightness" "lower"; }
     Mod+XF86MonBrightnessDown   hotkey-overlay-title="Cycle wlsunset mode" allow-when-locked=true { spawn "killall" "-SIGUSR1" "wlsunset"; }
 
     // ----- Windows Motions -----
@@ -184,31 +181,16 @@ layout {
     default-column-width {}
 
     focus-ring {
-        // off
         width 2
         active-color "rgba(196, 105, 61, 1)"
-        inactive-color "#505050"
-        // active-gradient from="#80c8ff" to="#bbddff" angle=45
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        inactive-color "rgba(50, 33, 25, 1)"
+        urgent-color "rgba(197, 48, 48, 1)"
     }
 
-    border {
-        off
-        width 2
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        // urgent-color "#9b0000"
-        // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    /-border {
     }
 
     /-shadow {
-        // on
-        // draw-behind-window true
-        // softness 30
-        // spread 5
-        // offset x=0 y=5
-        // color "#0007"
     }
 
     struts {
@@ -270,30 +252,15 @@ window-rule {
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
+    draw-border-with-background false
 }
 
-/-window-rule {
+window-rule {
     match is-floating=false
     opacity 0.98
 }
 
-/-window-rule {
-    match is-floating=false
-    opacity 1.0
-}
-
-/-window-rule {
-    match is-floating=true
-    border {
-        off
-    }
-    focus-ring {
-        off
-    }
-}
-
 window-rule {
-    match app-id=r#"^waypaper$"#
     match app-id=r#"^Pinentry-gtk$"#
     match app-id=r#"^org.kde.dolphin$"#
     match app-id=r#"^org.pulseaudio.pavucontrol$"#
