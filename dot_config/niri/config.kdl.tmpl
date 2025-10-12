@@ -62,10 +62,8 @@ binds {
     // ----- Applications -----
     Mod+Return                  hotkey-overlay-title="Terminal" { spawn "foot"; }
     Mod+Space                   hotkey-overlay-title="App Launcher" { spawn "fuzzel"; }
-    // Mod+Shift+Return            hotkey-overlay-title="Browser" { spawn "librewolf"; }
     Mod+Alt+L                   hotkey-overlay-title="Lock Screen" { spawn "hyprlock"; }
     Mod+E                       hotkey-overlay-title="File Manager" { spawn "dolphin"; }
-    // Mod+Shift+C                 hotkey-overlay-title="Colour Picker: hyprpicker" { spawn "hyprpicker"; }
 
     // ----- Audio Controls -----
     XF86AudioRaiseVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "raise"; }
@@ -87,9 +85,13 @@ binds {
 
     Mod+H                       { focus-column-left; }
     Mod+L                       { focus-column-right; }
+    // Mod+H                       { spawn "vim-niri-nav" "left" "w"; }
+    // Mod+L                       { spawn "vim-niri-nav" "right" "w"; }
 
     Mod+K                       { focus-window-or-workspace-up; }
     Mod+J                       { focus-window-or-workspace-down; }
+    // Mod+K                       { spawn "vim-niri-nav" "up" "w"; }
+    // Mod+J                       { spawn "vim-niri-nav" "down" "w"; }
 
     Mod+U                       { focus-workspace-up; }
     Mod+D                       { focus-workspace-down; }
@@ -146,10 +148,6 @@ binds {
 
     Mod+Shift+P                 { power-off-monitors; }
 
-    Mod+Left                    { spawn "vim-niri-nav" "left" "w"; }
-    Mod+Down                    { spawn "vim-niri-nav" "down" "w"; }
-    Mod+Up                      { spawn "vim-niri-nav" "up" "w"; }
-    Mod+Right                   { spawn "vim-niri-nav" "right" "w"; }
 }
 
 //
