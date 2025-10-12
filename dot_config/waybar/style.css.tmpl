@@ -4,7 +4,7 @@
     border: none;
     border-radius: 20px;
     font-family: Maple Mono NFPropo, Maple Mono NF;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 window#waybar {
@@ -14,32 +14,21 @@ window#waybar {
 
 tooltip {
     background: rgba(18, 18, 18, 1);
-    border: 1px solid rgba(177, 66, 66, 1);
+    border: 1px solid rgba(196, 105, 61, 1);
 }
 
 tooltip label {
     color: rgba(180, 180, 180, 1);
 }
 
-.bar2 #clock, .bar1 #power-profiles-daemon {
-    background-color: rgba(18, 18, 18, 0.5);
-    padding: 0 10px;
-    border-right: 2px solid rgba(177, 66, 66, 0.5);
-}
-
-.bar1 #clock, .bar2 #power-profiles-daemon {
-    background-color: rgba(18, 18, 18, 0.5);
-    padding: 0 10px;
-    border-left: 2px solid rgba(177, 66, 66, 0.5);
-} 
-
-#idle_inhibitor {
-    background-color: rgba(18, 18, 18, 0.5);
-    padding: 0 10px;
+#clock, #power-profiles-daemon, #idle_inhibitor {
+    background-color: #121212;
+    padding: 5px 10px;
 }
 
 #idle_inhibitor.activated {
-    background-color: rgba(177, 66, 66, 0.5);
+    background-color: rgba(177, 66, 66, 1);
+    color: #121212
 }
 
 #workspaces button {

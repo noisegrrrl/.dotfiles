@@ -154,6 +154,10 @@ binds {
 
 spawn-at-startup "wlsunset" "-l" "48.8" "-L" "2.3"
 spawn-at-startup "swayosd-server"
+spawn-at-startup "librewolf"
+spawn-at-startup "foot" "-a" "foothome"
+spawn-at-startup "vesktop"
+spawn-at-startup "move-column-to-first" // make sure foot is on the right at startup
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
@@ -164,6 +168,7 @@ screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 
 layout {
+    background-color "transparent"
     gaps 16 
     always-center-single-column
     empty-workspace-above-first
@@ -179,10 +184,10 @@ layout {
     default-column-width {}
 
     focus-ring {
-        width 2
-        active-color "rgba(196, 105, 61, 1)"
-        inactive-color "rgba(50, 33, 25, 1)"
-        urgent-color "rgba(197, 48, 48, 1)"
+        width 3
+        active-color "#B14242"
+        inactive-color "#121212"
+        urgent-color "#DF6464"
     }
 
     /-border {
@@ -235,16 +240,27 @@ workspace "vesktop" {
 window-rule {
     match at-startup=true app-id=r#"^vesktop$"#
     open-on-workspace "vesktop"
+    open-maximized true
+    open-focused false
 }
 
 window-rule {
-    match at-startup=true app-id=r#"^Librewolf$"#
+    match at-startup=true app-id=r#"^librewolf$"#
     open-on-workspace "home"
+    default-column-width { proportion 0.66667; }
+    open-focused true
 }
 
 window-rule {
-    match at-startup=true app-id=r#"^foot$"#
+    match at-startup=true app-id=r#"^foothome$"#
     open-on-workspace "home"
+    default-column-width { proportion 0.33333; }
+    open-focused false
+}
+
+window-rule {
+    match app-id=r#"^foot$"#
+    default-column-width { proportion 0.33333; }
 }
 
 window-rule {
