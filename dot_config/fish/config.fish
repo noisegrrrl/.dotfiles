@@ -33,8 +33,8 @@ abbr v 'vim'
 #
 abbr icat 'viu'
 #
-abbr spo 'systemctl poweroff --full'
-abbr srb 'systemctl reboot --full'
+abbr poweroff 'systemctl poweroff --full'
+abbr reboot 'systemctl reboot --full'
 #
 abbr cz 'chezmoi'
 abbr czd 'chezmoi cd'
