@@ -155,9 +155,8 @@ binds {
 spawn-at-startup "wlsunset" "-l" "48.8" "-L" "2.3"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "librewolf"
-spawn-at-startup "foot" "-a" "foothome"
 spawn-at-startup "vesktop"
-spawn-at-startup "niri" "msg" "action" "move-column-to-last" // make sure foot is on the right at startup
+spawn-sh-at-startup "sleep 3 ; foot -a foothome"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
@@ -248,14 +247,14 @@ window-rule {
     match at-startup=true app-id=r#"^librewolf$"#
     open-on-workspace "home"
     default-column-width { proportion 0.66667; }
-    open-focused true
+    open-focused false
 }
 
 window-rule {
     match at-startup=true app-id=r#"^foothome$"#
     open-on-workspace "home"
     default-column-width { proportion 0.33333; }
-    open-focused false
+    open-focused true
 }
 
 window-rule {
