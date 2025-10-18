@@ -1,6 +1,7 @@
 if status is-login
-    set -gx EDITOR nvim 
+    set -gx EDITOR nvim
     set -gx VISUAL nvim
+    set -gx SUDO_EDITOR "/home/noisegrrrl/.local/share/bob/nvim-bin/nvim"
     set -gx GPG_TTY $(tty)
 
     # format man pages

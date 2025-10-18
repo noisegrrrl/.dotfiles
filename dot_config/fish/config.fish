@@ -1,15 +1,3 @@
-set -gx EDITOR nvim 
-set -gx VISUAL nvim
-set -gx GPG_TTY $(tty)
-
-# format man pages
-set -x MANROFFOPT "-c"
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-
-fish_add_path ~/.local/bin
-set -gx VOLTA_HOME ~/.volta
-fish_add_path $VOLTA_HOME/bin
-fish_add_path ~/.local/share/bob/nvim-bin
 #
 alias ls 'eza --color=always --group-directories-first --icons=always' # preferred listing
 abbr ll 'ls -l'
@@ -28,8 +16,10 @@ abbr cleanup 'sudo pacman -Rns (pacman -Qtdq)' # cleanup orphaned packages
 alias cat 'bat -pp --color=auto'
 abbr c 'cat'
 #
-alias vim 'nvim'
-abbr v 'vim'
+abbr vim 'nvim'
+abbr v 'nvim'
+abbr svim 'sudo -e'
+abbr sv 'sudo -e'
 #
 abbr icat 'viu'
 #
@@ -38,7 +28,7 @@ abbr reboot 'systemctl reboot --full'
 #
 abbr cz 'chezmoi'
 abbr czd 'chezmoi cd'
-abbr cze 'vim (chezmoi source-path)'
+abbr cze 'nvim (chezmoi source-path)'
 alias czg 'git --git-dir=(chezmoi source-path)/.git --work-tree=(chezmoi source-path)'
 #
 abbr wr killall -SIGUSR2 waybar
