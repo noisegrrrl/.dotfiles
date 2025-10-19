@@ -62,7 +62,7 @@ binds {
     // ----- Applications -----
     Mod+Return                  hotkey-overlay-title="Terminal" { spawn "foot"; }
     Mod+Space                   hotkey-overlay-title="App Launcher" { spawn "fuzzel"; }
-    Mod+Alt+L                   hotkey-overlay-title="Lock Screen" { spawn "hyprlock"; }
+    Mod+Alt+L                   hotkey-overlay-title="Lock Screen" { spawn "loginctl" "lock-session"; }
     Mod+E                       hotkey-overlay-title="File Manager" { spawn "dolphin"; }
 
     // ----- Audio Controls -----
@@ -72,8 +72,6 @@ binds {
     Mod+XF86AudioMute           allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; } 
 
     // ----- Brightness Controls -----
-    // XF86MonBrightnessUp         allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%+"; }
-    // XF86MonBrightnessDown       allow-when-locked=true { spawn "brightnessctl" "-e4" "-n2" "set" "5%-"; }
     XF86MonBrightnessUp         allow-when-locked=true { spawn "swayosd-client" "--brightness" "raise"; }
     XF86MonBrightnessDown       allow-when-locked=true { spawn "swayosd-client" "--brightness" "lower"; }
     Mod+XF86MonBrightnessDown   hotkey-overlay-title="Cycle wlsunset mode" allow-when-locked=true { spawn "killall" "-SIGUSR1" "wlsunset"; }
@@ -154,9 +152,11 @@ binds {
 
 spawn-at-startup "wlsunset" "-l" "48.8" "-L" "2.3"
 spawn-at-startup "swayosd-server"
+{{- if eq .chezmoi.hostname "stone-ocean" }}
 spawn-at-startup "librewolf"
 spawn-at-startup "vesktop"
 spawn-sh-at-startup "sleep 3 ; foot -a foothome"
+{{- end }}
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
@@ -220,22 +220,21 @@ layout {
 
 animations {}
 
+{{ if eq .chezmoi.hostname "stone-ocean" }}
 workspace "home" {
-    {{ if eq .chezmoi.hostname "stone-ocean" }}
     open-on-output "DP-1"
-    {{ end }}
 }
 
 workspace "vesktop" {
-    {{ if eq .chezmoi.hostname "stone-ocean" }}
     open-on-output "DP-2"
-    {{ end }}
 }
+{{ end }}
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
+{{ if eq .chezmoi.hostname "stone-ocean" }}
 window-rule {
     match at-startup=true app-id=r#"^vesktop$"#
     open-on-workspace "vesktop"
@@ -256,6 +255,7 @@ window-rule {
     default-column-width { proportion 0.33333; }
     open-focused true
 }
+{{- end}}
 
 window-rule {
     match app-id=r#"^foot$"#
