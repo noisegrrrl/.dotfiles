@@ -1,4 +1,4 @@
-// vim: set filetype=jsonc 
+// vim: set filetype=jsonc : 
 {{- if eq .chezmoi.hostname "stone-ocean" }} 
 [
     {
@@ -54,36 +54,29 @@
 ]
 {{- else if eq .chezmoi.hostname "x-ex01-calibarn" }}
 {
-    // "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 0, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "position": "top",
+    "layer": "bottom",
+    "spacing": 0,
     "modules-left": [
+        "niri/workspaces",
         "cpu",
         "memory",
         "temperature",
-        "niri/window",
         "custom/media"
     ],
     "modules-center": [
-        "niri/workspaces"
+        "clock"
     ],
     "modules-right": [
-        "mpd",
+        "tray",
         "idle_inhibitor",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
         "backlight",
-        "battery",
-        "clock",
-        "tray",
-        "custom/power"
+        "battery"
     ],
     "niri/workspaces": {
-       // "format": "{name}: {icon}",
        "format": "{icon}",
        "format-icons": {
           //  "1": "",
@@ -147,7 +140,8 @@
         // }
     },
     "clock": {
-        "timezone": "Europe/Paris",
+        // "timezone": "Europe/Paris",
+        "format": "{:%a, %d. %b  %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -165,9 +159,9 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": [
-            "",
+            "",
             "",
-            ""
+            ""
         ]
     },
     "backlight": {
