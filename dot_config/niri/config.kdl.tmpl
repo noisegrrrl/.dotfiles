@@ -47,7 +47,6 @@ output "DP-2" {
     position x=2560 y=0
     transform "90"
     mode "1920x1080@60.000"
-    // hot-corners "off"
 }
 {{ end }}
 
@@ -321,4 +320,10 @@ clipboard {
 hotkey-overlay {
     skip-at-startup
     hide-not-bound
+}
+
+gestures {
+    hot-corners {
+        off
+    }
 }
