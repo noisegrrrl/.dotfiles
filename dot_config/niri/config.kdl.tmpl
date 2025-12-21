@@ -149,6 +149,7 @@ binds {
 
 //
 
+spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 spawn-at-startup "wlsunset" "-l" "48.8" "-L" "2.3"
 spawn-at-startup "swayosd-server"
 {{- if eq .chezmoi.hostname "stone-ocean" }}

@@ -1,0 +1,13 @@
+packages:
+  archlinux:
+    pacman:
+      - 'foot'
+      - 'fish'
+      - 'niri'
+      - 'bat'
+      - 'eza'
+      - 'viu'
+      - 'waybar'
+      - 'git'
+      - 'librewolf'
+      - 'vesktop'
