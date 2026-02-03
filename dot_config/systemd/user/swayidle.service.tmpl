@@ -4,6 +4,10 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
+{{- if eq .chezmoi.hostname "x-ex01-calibarn" }}
 ExecStart=/usr/bin/swayidle -w timeout 600 'swaylock -f' timeout 900 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors' timeout 1800 'systemctl suspend' before-sleep 'swaylock -f' lock 'swaylock -f'
+{{- else if eq .chezmoi.hostname "stone-ocean" }}
+ExecStart=/usr/bin/swayidle -w timeout 600 'swaylock -f' timeout 900 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors' lock 'swaylock -f'
+{{- end }}
 Restart=on-failure
 
