@@ -2,6 +2,8 @@
 
 # Create a list of sinks with pretty names
 options=$(pactl -f json list sinks | jq -r '.[] | .description')
+options=$(echo "$options" | sed '/^Easy Effects Sink/d') # Remove Easy Effects Sink
+options=$(echo "$options" | sed '/^Scarlett/d') # Remove Scarlett 
 
 # Let the user select a description
 selection=$(echo "$options" | fuzzel --dmenu "Output:")

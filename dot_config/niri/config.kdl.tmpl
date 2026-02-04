@@ -69,7 +69,7 @@ binds {
     XF86AudioLowerVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
     XF86AudioMute               allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
     Mod+XF86AudioMute           allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; } 
-
+    Mod+Shift+XF86AudioMute     allow-when-locked=true { spawn-sh "$XDG_CONFIG_HOME/scripts/dmenu/audio-output.sh"; }
     // ----- Brightness Controls -----
     XF86MonBrightnessUp         allow-when-locked=true { spawn "swayosd-client" "--brightness" "+5"; }
     XF86MonBrightnessDown       allow-when-locked=true { spawn "swayosd-client" "--brightness" "-5"; }
