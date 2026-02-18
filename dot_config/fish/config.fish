@@ -1,9 +1,12 @@
 #
 alias ls 'eza --color=always --group-directories-first --icons=always' # preferred listing
-abbr ll 'ls -l'
 abbr la 'ls -a'
-abbr lla 'ls -al'
+abbr ll 'ls -l'
+abbr lla 'ls -la'
 abbr l. 'ls -a | grep -e \'^\.\'' # show only dotfiles
+abbr lg 'ls -G'
+abbr lga 'ls -Ga'
+abbr lag 'ls -Ga'
 #
 alias tree 'eza -T --group-directories-first'  # tree
 abbr t 'tree'

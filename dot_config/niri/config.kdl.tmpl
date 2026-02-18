@@ -21,7 +21,9 @@ input {
     }
     warp-mouse-to-focus
     focus-follows-mouse max-scroll-amount="0%"
+    {{- if eq .chezmoi.hostname "x-ex-01-calibarn" }}
     disable-power-key-handling
+    {{- end}}
 }
 
 // ────────────── Output Configuration ──────────────
@@ -69,7 +71,7 @@ binds {
     XF86AudioLowerVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
     XF86AudioMute               allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
     Mod+XF86AudioMute           allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; } 
-    Mod+Shift+XF86AudioMute     allow-when-locked=true { spawn-sh "$XDG_CONFIG_HOME/scripts/dmenu/audio-output.sh"; }
+    Mod+Shift+XF86AudioMute     allow-when-locked=true { spawn-sh "$XDG_CONFIG_HOME/niri/scripts/dmenu/audio-output.sh"; }
     // ----- Brightness Controls -----
     XF86MonBrightnessUp         allow-when-locked=true { spawn "swayosd-client" "--brightness" "+5"; }
     XF86MonBrightnessDown       allow-when-locked=true { spawn "swayosd-client" "--brightness" "-5"; }
@@ -90,11 +92,16 @@ binds {
     // Mod+K                       { spawn "vim-niri-nav" "up" "w"; }
     // Mod+J                       { spawn "vim-niri-nav" "down" "w"; }
 
-    Mod+U                       { focus-workspace-up; }
-    Mod+D                       { focus-workspace-down; }
+    // Mod+U                       { focus-workspace-up; }
+    // Mod+D                       { focus-workspace-down; }
 
-    Mod+Shift+H                 { move-column-left; }
-    Mod+Shift+L                 { move-column-right; }
+    // Mod+Shift+H                 { move-column-left; }
+    // Mod+Shift+L                 { move-column-right; }
+    Mod+Shift+H                 { consume-or-expel-window-left; }
+    Mod+Shift+L                 { consume-or-expel-window-right; }
+
+    Mod+Ctrl+H                 { move-column-left; }
+    Mod+Ctrl+L                 { move-column-right; }
 
     Mod+Shift+K                 { move-window-up-or-to-workspace-up; }
     Mod+Shift+J                 { move-window-down-or-to-workspace-down; }
@@ -104,8 +111,6 @@ binds {
 
     Mod+Tab                     { focus-workspace-previous; }
 
-    Mod+BracketLeft             { consume-or-expel-window-left; }
-    Mod+BracketRight            { consume-or-expel-window-right; }
 
     Mod+Grave                   { focus-monitor-next; }
     Mod+Shift+Grave             { move-column-to-monitor-next; }
@@ -150,7 +155,9 @@ binds {
 //
 
 spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
+{{- if eq .chezmoi.hostname "x-ex01-calibarn" }}
 spawn-at-startup "wlsunset" "-l" "48.8" "-L" "2.3"
+{{- end }}
 spawn-at-startup "swayosd-server"
 {{- if eq .chezmoi.hostname "stone-ocean" }}
 spawn-at-startup "librewolf"
@@ -168,9 +175,11 @@ screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
 layout {
     background-color "transparent"
-    gaps 16 
+    gaps 8
     always-center-single-column
     empty-workspace-above-first
+
+    default-column-width {}
 
     preset-column-widths {
         proportion 0.33333
@@ -179,8 +188,12 @@ layout {
         proportion 0.95
     }
 
-    preset-window-heights {}
-    default-column-width {}
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.75
+        proportion 1.0
+    }
 
     focus-ring {
         width 3
@@ -198,8 +211,8 @@ layout {
     struts {
         left 4
         right 4
-        top 4 
-        bottom 4 
+        // top 4 
+        // bottom 4 
     }
 
     tab-indicator {
@@ -220,7 +233,7 @@ layout {
 
 animations {}
 
-{{ if eq .chezmoi.hostname "stone-ocean" }}
+{{- if eq .chezmoi.hostname "stone-ocean" }}
 workspace "home" {
     open-on-output "DP-1"
 }
@@ -228,13 +241,13 @@ workspace "home" {
 workspace "vesktop" {
     open-on-output "DP-2"
 }
-{{ end }}
+{{- end }}
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
-{{ if eq .chezmoi.hostname "stone-ocean" }}
+{{- if eq .chezmoi.hostname "stone-ocean" }}
 window-rule {
     match at-startup=true app-id=r#"^vesktop$"#
     open-on-workspace "vesktop"
@@ -258,11 +271,6 @@ window-rule {
 {{- end}}
 
 window-rule {
-    match app-id=r#"^foot$"#
-    default-column-width { proportion 0.33333; }
-}
-
-window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
     draw-border-with-background false
@@ -271,6 +279,11 @@ window-rule {
 window-rule {
     match is-floating=false
     opacity 0.98
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
 window-rule {
