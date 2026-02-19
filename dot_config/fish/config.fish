@@ -34,10 +34,7 @@ abbr czd 'chezmoi cd'
 abbr cze 'nvim (chezmoi source-path)'
 alias czg 'git --git-dir=(chezmoi source-path)/.git --work-tree=(chezmoi source-path)'
 #
-abbr wr killall -SIGUSR2 waybar
-#
-alias spawn 'niri msg action spawn --'
-complete -x -c spawn --no-files -a "(__fish_complete_command)"
+alias wget 'wget --hsts-file=$XDG_DATA_HOME/wget-hsts'                    
 #
 function mvhwp
     for img in $argv;
