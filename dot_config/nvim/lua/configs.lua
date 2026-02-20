@@ -12,5 +12,6 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.swapfile = false
 vim.o.numberwidth = 2
+vim.o.mouse = ""
 
 vim.cmd.filetype("plugin indent on")
