@@ -19,13 +19,17 @@ vim.keymap.set({ 'n', 'v', 'o', 'i' }, '<up>', '<nop>', { noremap = true })
 vim.keymap.set({ 'n', 'v', 'o', 'i' }, '<down>', '<nop>', { noremap = true })
 
 -- disable left/right arrows for consistency
-vim.keymap.set({ 'n', 'v', 'o', 'i'}, '<left>', '<nop>', { noremap = true })
-vim.keymap.set({ 'n', 'v', 'o', 'i'}, '<right>', '<nop>', { noremap = true })
+vim.keymap.set({ 'n', 'v', 'o', 'i' }, '<left>', '<nop>', { noremap = true })
+vim.keymap.set({ 'n', 'v', 'o', 'i' }, '<right>', '<nop>', { noremap = true })
 
 -- https://github.com/nvim-neo-tree/neo-tree.nvim/issues/872#issuecomment-1511401740
 local is_neotree_focused = function()
     -- Get our current buffer number
     local bufnr = vim.api.nvim_get_current_buf and vim.api.nvim_get_current_buf() or vim.fn.bufnr()
+    -- neo-tree.config may be nil in which case toggle neo-tree 
+    if require("neo-tree").config == nil then
+        return true
+    end
     -- Get all the available sources in neo-tree
     for _, source in ipairs(require("neo-tree").config.sources) do
         -- Get each sources state
@@ -47,3 +51,21 @@ local focus_toggle_neotree = function()
 end
 
 vim.keymap.set('n', '<leader>e', function() focus_toggle_neotree() end)
+
+vim.keymap.set('n', '<leader>cz', require('telescope').extensions.chezmoi.find_files, {})
+
+-- You can also search a specific target directory and override arguments
+-- Here is an example with the default args
+vim.keymap.set('n', '<leader>fc', function()
+    require('telescope').extensions.chezmoi.find_files({
+        -- This overrides the default arguments used with 'chezmoi list'
+        args = {
+            "--path-style",
+            "absolute",
+            "--include",
+            "files",
+            "--exclude",
+            "externals",
+        }
+    })
+end, {})
