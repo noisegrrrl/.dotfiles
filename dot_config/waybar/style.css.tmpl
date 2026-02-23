@@ -3,7 +3,7 @@
     border: none;
     border-radius: 0px;
     font-family: Maple Mono NFPropo, Maple Mono NF;
-    font-size: 15px;
+    font-size: large;
 }
 
 window#waybar {
@@ -14,6 +14,7 @@ window#waybar {
 tooltip {
     background: rgba(18, 18, 18, 1);
     border: 1px solid rgba(196, 105, 61, 1);
+    border-radius: 10px;
 }
 
 tooltip label {
@@ -28,13 +29,41 @@ tooltip label {
 #bluetooth, 
 #clock, 
 #power-profiles-daemon, 
-#idle_inhibitor {
+#idle_inhibitor,
+#battery,
+#backlight,
+#network {
     background-color: #121212;
     {{ if eq .chezmoi.hostname "stone-ocean" }} 
     padding: 5px 10px;
     {{ else if eq .chezmoi.hostname "x-ex01-calibarn" }}
-    padding: 0px 10px;
+    padding: 0px 5px;
     {{ end }}
+}
+
+/*
+#battery.charging {
+color: white;
+background-color: #26A65B;
+}
+
+@keyframes blink {
+to {
+background-color: #ffffff;
+color: #000000;
+}
+}
+ */
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #idle_inhibitor.activated {
@@ -64,22 +93,21 @@ background-color: #2ecc71;
 color: #000000;
 }
  */
-
-{{ if eq .chezmoi.hostname "stone-ocean" }} 
-
-
+/*
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: white;
-    border-bottom: 3px solid transparent;
+padding: 0 5px;
+background: transparent;
+color: white;
+border-bottom: 3px solid transparent;
 }
-
+ */
+/*
 #workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
+background: #64727D;
+border-bottom: 3px solid white;
 }
-{{ else if eq .chezmoi.hostname "x-ex01-calibarn" }} 
+ */
+{{ if eq .chezmoi.hostname "x-ex01-calibarn" }} 
 window#waybar.hidden {
     opacity: 0.2;
 }
@@ -119,35 +147,12 @@ button:hover {
 }
 
 
-#battery,
-#backlight,
-#network,
+/*,
 #wireplumber {
-    padding: 0 10px;
-    color: #fad9e1;
-    background-color: #150208;
-}
-
-#battery.charging, #battery.plugged {
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+padding: 0 10px;
+color: #fad9e1;
+background-color: #150208;
+}*/
 
 label:focus {
     background-color: #000000;
@@ -155,9 +160,6 @@ label:focus {
 
 #network.disconnected {
     background-color: #f53c3c;
-}
-
-#pulseaudio {
 }
 
 #pulseaudio.muted {
@@ -173,8 +175,6 @@ label:focus {
 #wireplumber.muted {
     background-color: #f53c3c;
 }
-#temperature {
-}
 
 #temperature.critical {
     background-color: #eb4d4b;
@@ -189,78 +189,5 @@ label:focus {
     background-color: #eb4d4b;
 }
 
-#idle_inhibitor.activated {
-    background-color: #fad9e1;
-    color: #150208;
-}
 
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-    background-color: transparent;
-}
-
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
-}
 {{ end }}
