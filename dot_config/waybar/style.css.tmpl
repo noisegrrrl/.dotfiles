@@ -2,7 +2,10 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: Maple Mono NFPropo, Maple Mono NF;
+    font-family: "Annotation Mono Medium";
+    /* font-family: "AtkynsonMono NFP Medium"; */
+    /* font-family: "Annotation Mono Regular"; */
+    /* font-family: 'Maple Mono NFPropo'; */
     font-size: large;
 }
 
@@ -21,25 +24,15 @@ tooltip label {
     color: rgba(180, 180, 180, 1);
 }
 
-#pulseaudio, 
-#cpu, 
-#memory, 
-#temperature, 
-#tray, 
-#bluetooth, 
-#clock, 
-#power-profiles-daemon, 
-#idle_inhibitor,
-#battery,
-#backlight,
-#network {
+.module {
     background-color: #121212;
-    {{ if eq .chezmoi.hostname "stone-ocean" }} 
-    padding: 5px 10px;
-    {{ else if eq .chezmoi.hostname "x-ex01-calibarn" }}
     padding: 0px 5px;
-    {{ end }}
+    /* border: 1px solid rgba(100, 114, 125, 0.5); */
 }
+
+/* .modules-left { */
+/*     border: 1px solid rgba(100, 114, 125, 0.5); */
+/* } */
 
 /*
 #battery.charging {
@@ -71,11 +64,20 @@ color: #000000;
     color: #121212
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:first-child > * {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+/* last module in left section */
+.modules-left > widget:last-child > * {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 10px;
 }
+ 
+/* first module in right section */
+.modules-right > widget:first-child > * {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+}
+
 
 /*
 #power-profiles-daemon.performance {
