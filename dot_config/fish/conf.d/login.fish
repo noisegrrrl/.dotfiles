@@ -20,6 +20,12 @@ if status is-login
 
     set -gx GOPATH $XDG_DATA_HOME/go                                         
 
+    set -gx CARGO_HOME $XDG_DATA_HOME/cargo                                  
+
+    set -gx WINEPREFIX $XDG_DATA_HOME/wine
+
+    set -gx RENPY_PATH_TO_SAVES $XDG_DATA_HOME                                
+
     # format man pages
     set -gx MANROFFOPT "-c"
     set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
