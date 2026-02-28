@@ -1,6 +1,6 @@
 ignore-empty-password
 
-font=MapleMono
+font=AnnotationMono
 
 indicator-radius=150
 indicator-thickness=8

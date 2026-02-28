@@ -27,12 +27,31 @@ tooltip label {
 .module {
     background-color: #121212;
     padding: 0px 5px;
-    /* border: 1px solid rgba(100, 114, 125, 0.5); */
 }
 
-/* .modules-left { */
-/*     border: 1px solid rgba(100, 114, 125, 0.5); */
-/* } */
+.modules-left > widget > .module {
+    border-right: 1px solid rgba(256, 256, 256, 1);
+}
+
+/* last module in left section */
+.modules-left > widget:last-child > * {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 10px;
+    border-right: none;
+}
+
+.modules-right > widget > .module {
+    border-left: 1px solid rgba(256, 256, 256, 1);
+}
+ 
+/* first module in right section */
+.modules-right > widget:first-child > * {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+    border: none;
+}
 
 /*
 #battery.charging {
@@ -64,19 +83,6 @@ color: #000000;
     color: #121212
 }
 
-/* last module in left section */
-.modules-left > widget:last-child > * {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding-right: 10px;
-}
- 
-/* first module in right section */
-.modules-right > widget:first-child > * {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    padding-left: 10px;
-}
 
 
 /*
@@ -113,6 +119,7 @@ border-bottom: 3px solid white;
 window#waybar.hidden {
     opacity: 0.2;
 }
+
 /*
 window#waybar {   
 transition-property: background-color;
@@ -148,14 +155,6 @@ button:hover {
     background-color: #a37800;
 }
 
-
-/*,
-#wireplumber {
-padding: 0 10px;
-color: #fad9e1;
-background-color: #150208;
-}*/
-
 label:focus {
     background-color: #000000;
 }
@@ -167,15 +166,6 @@ label:focus {
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
-}
-
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
 }
 
 #temperature.critical {

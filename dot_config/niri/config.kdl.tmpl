@@ -67,14 +67,14 @@ binds {
     Mod+E                       hotkey-overlay-title="File Manager" { spawn "dolphin"; }
 
     // ----- Audio Controls -----
-    XF86AudioRaiseVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "raise"; }
-    XF86AudioLowerVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
+    XF86AudioRaiseVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "+2"; }
+    XF86AudioLowerVolume        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "-2"; }
     XF86AudioMute               allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
     Mod+XF86AudioMute           allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; } 
     Mod+Shift+XF86AudioMute     allow-when-locked=true { spawn-sh "$XDG_CONFIG_HOME/niri/scripts/dmenu/audio-output.sh"; }
     // ----- Brightness Controls -----
-    XF86MonBrightnessUp         allow-when-locked=true { spawn "swayosd-client" "--brightness" "+5"; }
-    XF86MonBrightnessDown       allow-when-locked=true { spawn "swayosd-client" "--brightness" "-5"; }
+    XF86MonBrightnessUp         allow-when-locked=true { spawn "swayosd-client" "--brightness" "+2"; }
+    XF86MonBrightnessDown       allow-when-locked=true { spawn "swayosd-client" "--brightness" "-2"; }
     Mod+XF86MonBrightnessDown   hotkey-overlay-title="Cycle wlsunset mode" allow-when-locked=true { spawn "killall" "-SIGUSR1" "wlsunset"; }
 
     // ----- Windows Motions -----
